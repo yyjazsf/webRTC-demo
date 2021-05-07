@@ -1,0 +1,14 @@
+{
+  "name": "webrtc-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serve ."
+  },
+  "keywords": [
+    "webrtc"
+  ],
+  "author": "",
+  "license": "MIT"
+}
