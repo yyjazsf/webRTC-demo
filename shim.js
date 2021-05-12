@@ -35,3 +35,26 @@ function setVideoSrc(video, mediaStream) {
         video.src = window.URL.createObjectURL(mediaStream);
     }
 }
+
+
+function showVideo(selector, mediaStream) {
+  const dom = document.querySelector(selector);
+  if (!dom) {
+    return;
+  }
+  dom.innerHTML = "";
+  const video = document.createElement("video");
+  const audio = document.createElement("audio");
+  audio.muted = true;
+  video.muted = true;
+
+  video.onloadedmetadata = function (e) {
+    video.play();
+  };
+
+  // video.srcObject = mediaStream;
+  setVideoSrc(video, mediaStream);
+
+  dom.appendChild(video);
+  dom.appendChild(audio);
+}
